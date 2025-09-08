@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="password" id="passwordInput" />
+    <input type="checkbox" id="showPassword" /> 비밀번호 보기
+    <script>
+      const check = document.querySelector('#showPassword');
+      const password = document.querySelector('#passwordInput');
+      check.addEventListener('change', function (e) {
+        if (this.checked) {
+          password.type = 'text';
+        } else {
+          password.type = 'password';
+        }
+      });
+    </script>
+  </body>
+</html>

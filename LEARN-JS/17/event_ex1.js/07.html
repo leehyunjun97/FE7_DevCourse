@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" name="name" placeholder="이름 입력" />
+      <button type="submit">제출</button>
+    </form>
+    <script>
+      const form = document.getElementById('myForm');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.querySelector("[name='name']").value;
+        alert(`폼이 제출되었습니다! 입력한 이름: ${name}`);
+      });
+    </script>
+  </body>
+</html>

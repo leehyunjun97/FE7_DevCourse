@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="openModalButton">모달 열기</button>
+    <div id="modal" style="display: none">
+      <div>모달 내용</div>
+      <button id="closeModalButton">닫기</button>
+    </div>
+    <script>
+      const openBtn = document.querySelector('#openModalButton');
+      const closeBtn = document.querySelector('#closeModalButton');
+      const modal = document.querySelector('#modal');
+
+      openBtn.addEventListener('click', function () {
+        modal.style.display = 'block';
+      });
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>

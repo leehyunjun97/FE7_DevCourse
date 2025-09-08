@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button class="tab" data-target="tab1">탭 1</button>
+      <button class="tab" data-target="tab2">탭 2</button>
+    </div>
+    <div id="tab1" class="tab-content" style="display: none">탭 1 내용</div>
+    <div id="tab2" class="tab-content" style="display: none">탭 2 내용</div>
+    <script>
+      
+
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach((tab) =>
+        tab.addEventListener('click', function (e) {
+          const target = e.target.getAttribute('data-target');
+          const contents = document.querySelectorAll('.tab-content');
+          contents.forEach((item) => {
+            if (item.getAttribute('id') === target) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        })
+      );
+    </script>
+  </body>
+</html>
