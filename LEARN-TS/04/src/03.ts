@@ -51,7 +51,7 @@
   // 되게 어려운 개념 (복습 필수)
   // 번들러 (도구) => SASS, SCSS, TS -> HTML, CSS, JavaScript
   // 트리 셰이킹 -> 불필요한 코드를 제거해주는 기능
-  const Status = {
+  const Status = { 
     Pending: 'PENDING',
     Success: 'SUCCESS',
     Fail: 'FAIL',

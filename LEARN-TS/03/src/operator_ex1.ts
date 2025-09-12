@@ -125,7 +125,6 @@
 
   const personWithContact = createContact(person, contact);
   console.log(personWithContact);
-  // 예상 출력: { name: "Alice", age: 28, email: "alice@example.com" }
 }
 {
   // 10.
@@ -133,7 +132,8 @@
     if (typeof age === 'number') return age;
     if (typeof age === 'string') return Number(age);
   };
-
+  
+  // 예상 출력: { name: "Alice", age: 28, email: "alice@example.com" }
   console.log(getAge('25')); // 25
   console.log(getAge(30)); // 30
   console.log(getAge('abc')); // NaN

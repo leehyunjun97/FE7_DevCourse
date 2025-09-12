@@ -74,6 +74,4 @@
   // 6. 리터럴 타입 별칭
   type Direction = 'UP' | 'RIGHT' | 'LEFT' | 'DOWN';
   const direct: Direction = 'LEFT';
-
 }
-
