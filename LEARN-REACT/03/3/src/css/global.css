@@ -1,0 +1,11 @@
+.bg {
+  width: 100%;
+  height: 300px;
+  background: url('/images/york.jpg');
+}
+
+.bg2 {
+  width: 100%;
+  height: 300px;
+  background: url('../assets//images//york.jpg');
+}

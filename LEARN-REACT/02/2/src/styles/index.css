@@ -1,0 +1,8 @@
+@import './globals.css';
+@import './fonts.css';
+
+.title {
+  color: rgba(192, 108, 44, 0.59);
+  font-size: 50px;
+  text-decoration: underline;
+}

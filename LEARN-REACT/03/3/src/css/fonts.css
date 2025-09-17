@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'BagelFat';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JejuDoldam'; /* 사용할 폰트의 이름을 정의 */
+  src: url('../assets/fonts/doldam.woff2'), url('../assets/fonts/doldam.woff'); /* 폰트 파일의 위치 */
+}
+
+.nanum-pen-script-regular {
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-kr {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.bagel-fat {
+  font-family: 'BagelFat';
+}
+.doldam {
+  font-family: 'JejuDoldam';
+}
