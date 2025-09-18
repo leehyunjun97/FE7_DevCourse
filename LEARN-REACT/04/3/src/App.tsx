@@ -5,7 +5,7 @@ import Input from './components/html/Input';
 export default function App() {
   return (
     <>
-      <Input placeholder='Enter' /> <br />
+      <Input type='text' placeholder='Enter' /> <br />
       <Button disabled>Add</Button>
       <Button className='bg-[#ed4848]'>Cancel</Button> <br />
       <CheckBox type='checkbox'>
