@@ -9,6 +9,10 @@ export default function Todo() {
     { id: 1, text: '밥먹기', completed: false },
   ]);
 
+  // 상태 핸들러는 상위(Todo) 컴포넌트에서 관리하는게 좋다.
+  // 하위 컴포넌트는 UI와 핸들러 실행만 한다.
+  // uuid: Date.now().toString(36) + Math.random().toString(36).slice(2,8).toUpperCase()
+
   return (
     <>
       <div className='todo'>

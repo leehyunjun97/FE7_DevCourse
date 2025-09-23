@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from './html/Button';
 import Checkbox from './html/Checkbox';
 import SvgClose from './svg/SvgClose';
 import SvgPencil from './svg/SvgPencil';
+import { twMerge } from 'tailwind-merge';
 
-export default function TodoListItem({
+export default React.memo(function TodoListItem({
   todo,
   setTodoList,
 }: {
   todo: Todo;
   setTodoList: React.Dispatch<React.SetStateAction<Todo[]>>;
 }) {
+  console.log('todoListItem Rendering');
+
   const [isModify, setIsModify] = useState(false);
   const [modifyInput, setModifyInput] = useState(todo.text);
 
@@ -27,7 +30,7 @@ export default function TodoListItem({
   };
 
   const modifyToggle = () => {
-    if (isModify) {
+    if (isModify && todo.text !== modifyInput) {
       setIsModify((prev) => !prev);
       todoModifyHandler(todo.id);
     } else {
@@ -42,14 +45,17 @@ export default function TodoListItem({
         item.id === id ? { ...item, completed: !item.completed } : item
       )
     );
-
-    console.log('현재: ', todo);
   };
 
   return (
     <>
       {/* 할 일이 완료되면 .todo__item--complete 추가 */}
-      <li className={`todo__item`}>
+      <li
+        className={twMerge(
+          `todo__item`,
+          todo.completed && 'todo__item--complete'
+        )}
+      >
         {isModify ? (
           <input
             type='text'
@@ -85,4 +91,4 @@ export default function TodoListItem({
       </li>
     </>
   );
-}
+});
