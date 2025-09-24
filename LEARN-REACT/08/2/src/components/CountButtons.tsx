@@ -7,16 +7,16 @@ export default function CountButtons() {
   const dispatch = useDispatch<AppDispatch>();
   return (
     <>
-      <button onClick={() => dispatch({ type: 'counterSlice/increment' })}>
+      <button onClick={() => dispatch({ type: 'counterSlice2/increment' })}>
         증가
       </button>
       <button onClick={() => dispatch(incrementByAmount({ amount: 20 }))}>
         10+증가
       </button>
-      <button onClick={() => dispatch({ type: 'counterSlice/rest' })}>
+      <button onClick={() => dispatch({ type: 'counterSlice2/rest' })}>
         리셋
       </button>
-      <button onClick={() => dispatch({ type: 'counterSlice/decrement' })}>
+      <button onClick={() => dispatch({ type: 'counterSlice2/decrement' })}>
         감소
       </button>
       <br />

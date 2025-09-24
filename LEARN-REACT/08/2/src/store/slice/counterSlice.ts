@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
-  name: 'counterSlice',
+  name: 'counterSlice2',
   initialState: {
     value: 0,
   },
