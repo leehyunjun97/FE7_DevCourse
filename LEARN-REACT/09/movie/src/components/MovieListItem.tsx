@@ -1,25 +1,31 @@
-import { star, thumbnail01 } from "../assets/movies/assets";
+import { star } from '../assets/movies/assets';
 
-export default function MovieListItem() {
+export default function MovieListItem({ movie }: { movie: MovieType }) {
   return (
     <>
       <div>
-        <img src={thumbnail01} alt="" className="rounded-md w-full" />
-        <div className="flex justify-between items-center font-bold mt-4 mb-2 text-lg">
-          <h4 className="line-clamp-1">superman</h4>
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+          alt=''
+          className='rounded-md w-full'
+        />
+        <div className='flex justify-between items-center font-bold mt-4 mb-2 text-lg'>
+          <h4 className='line-clamp-1'>{movie.title}</h4>
         </div>
-        <div className="flex justify-between items-center text-sm text-gray-200">
-          <div className="flex items-center gap-2 font-bold">
+        <div className='flex justify-between items-center text-sm text-gray-200'>
+          <div className='flex items-center gap-2 font-bold'>
             <img
               src={star}
-              alt="star"
+              alt='star'
               width={18}
               height={18}
-              className="object-contain"
+              className='object-contain'
             />
-            <span className="text-yellow-500">4.1</span>
+            <span className='text-yellow-500'>{movie.vote_average}</span>
           </div>
-          <span className="text-yellow-500 font-bold">2.1</span>
+          <span className='text-yellow-500 font-bold'>
+            {movie.release_date}
+          </span>
         </div>
       </div>
     </>

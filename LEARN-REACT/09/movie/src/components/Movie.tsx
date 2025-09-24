@@ -1,15 +1,16 @@
-import MovieHeader from "./MovieHeader";
-import MovieList from "./MovieList";
-import MovieLoader from "./MovieLoader";
-import MovieMain from "./MovieMain";
+import MovieHeader from './MovieHeader';
+import MovieList from './MovieList';
+import MovieMain from './MovieMain';
 
 export default function Movie() {
   return (
     <>
       <MovieHeader />
       <MovieMain />
-      <MovieList />
-      <MovieLoader title="Popular" />
+      <MovieList title='Popular' url='/popular' />
+      <MovieList title='Now_playing' url='/now_playing' />
+      <MovieList title='Upcoming' url='/upcoming' />
+      {/* <MovieLoader title='Popular' /> */}
     </>
   );
 }
